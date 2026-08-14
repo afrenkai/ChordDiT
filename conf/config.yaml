@@ -1,0 +1,31 @@
+model_id: stabilityai/sd-turbo
+seed: 67
+image_size: 512
+compute_dtype: float32
+use_attention_mask: false
+use_center_crop: true
+use_safety_checker: false
+safety_checker_id: CompVis/stable-diffusion-safety-checker
+
+edit:
+  noise_samples: 1
+  n_steps: 1
+  t_start: 0.9
+  t_end: 0.3
+  t_delta: 0.15
+  step_scale: 1.0
+  cleanup: true
+
+dit:
+  input_size: 64
+  in_channels: 4
+  patch_size: [4, 4]
+  hidden_size: [192, 256]
+  depth: [2, 1]
+  num_heads: [4, 4]
+  mlp_ratio: 4.0
+  time_tokens: 4
+  context_tokens: 77
+  context_dimension: 768
+  time_embedding_size: 128
+  max_timestep: 1000
